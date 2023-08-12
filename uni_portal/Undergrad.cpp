@@ -8,3 +8,4 @@ void Undergrad::fun() {
 void Undergrad::description() {
 	std::cout << "These are the undergraduate classes" << std::endl;
 }
+
