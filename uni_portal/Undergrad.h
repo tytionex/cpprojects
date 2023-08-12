@@ -1,8 +1,9 @@
 #include "Student.h"
 
-class Undergrad: Student{
+class Undergrad: public Student{
 	public:
 		void fun();
 		void description();
+		void classes();
 };
 

@@ -1,10 +1,10 @@
 #include "Student.h"
 
 Student::Student(){
-	number = 0;
+	studentNumber = 0;
 }
 
 int Student::getNumber() {
-	return number;
+	return studentNumber;
 }
 

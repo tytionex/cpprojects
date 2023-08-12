@@ -1,12 +1,10 @@
 #include <iostream> 
 #include "Student.h"
 #include "Undergrad.h"
+#include <string>
 #include<limits> // used to get numeric limits
 
-int main(){
-
-	int a = 0;
-
+void intro(){
 	std::cout << "Hello user, welcome to USC portal" << std::endl;
 	std::cout << "What kind of student are you? " << std::endl;
 	std::cout << "_________________" << std::endl;
@@ -14,6 +12,14 @@ int main(){
 	std::cout << "Graduate      |  2" << std::endl;
 	std::cout << "Post Graduate |  3" << std::endl;
 	std::cout << "_________________" << std::endl;
+}
+
+
+int main(){
+	Undergrad ug;
+	int a = 0;
+
+	intro();
 
 	while(1){
 		std::cin >> a;
@@ -34,18 +40,22 @@ int main(){
 			}
 		}
 	}
-
+	
+	int studentFlag;
 	if(a == 1){
 		std::cout << "You are a Undergraduate Student" <<  std::endl;
+		studentFlag = 1;
 	}
 	else if(a == 2){
 		std::cout << "You are a Graduate Student" << std::endl;
+		studentFlag = 2;
+
 	}
 	else {
 		std::cout << "You are a Post Graudate Student" << std::endl;
+		studentFlag =3;
 	}
 
-	Undergrad myUndergrad;
 	std::cout << " 1. Login" << std::endl;
 	std::cout << " 2. Learn more" << std::endl;
 	std::cout << "What would you like to do?" << std::endl;	
@@ -67,8 +77,19 @@ int main(){
 			}
 		}
 	}	
+	
+	if(a == 1){
+		std::cout << "yay" << std::endl;
+	}
+	else if(a == 2){
+		std::cout << "noo" << std::endl;
+	}
 
-	std::cout << a << std::endl;
+	if(studentFlag == 1) {
+		std::cout << "yay" << std::endl;
+
+	}
+		
 	
 //	std::cout << myStudent.getNumber() << std::endl;
 	//myUndergrad.fun();
